@@ -17,12 +17,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "tb_tema")
 public class Tema {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 100, message = "O atributo título deve ter no mínimo 5 caracteres e no máximo 100.")
+	@Size(min = 5, max = 100, message = "O atributo título deve ter no mínimo cinco caracteres e no máximo cem.")
 	private String descricao;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -43,6 +44,14 @@ public class Tema {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 
 }

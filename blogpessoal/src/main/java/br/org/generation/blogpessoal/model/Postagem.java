@@ -24,11 +24,11 @@ public class Postagem {
 	private long id;
 	
 	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 100, message = "O atributo título deve ter no mínimo 5 caracteres e no máximo 100.")
+	@Size(min = 5, max = 100, message = "O atributo título deve ter no mínimo cinco caracteres e no máximo cem!")
 	private String titulo;
 	
-	@NotNull()
-	@Size(min = 10, max = 1020)
+	@NotNull(message = "O atributo texto é obrigatório!")
+	@Size(min = 10, max = 1020,  message = "O atributo texto deve ter no mínimo dez caracteres e no máximo mil e vinte!")
 	private String texto;
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -61,6 +61,12 @@ public class Postagem {
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
 	}
 	
 }

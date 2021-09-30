@@ -30,7 +30,6 @@ public class TemaController {
 	@GetMapping
 	public ResponseEntity<List<Tema>> getAll() {
 		return ResponseEntity.ok(temaRepository.findAll());
-
 	}
 
 	@GetMapping("/{id}")
