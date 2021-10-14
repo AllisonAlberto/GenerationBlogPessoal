@@ -22,9 +22,9 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull(message = "O atributo título é obrigatório!")
-	@Size(min = 5, max = 100, message = "O atributo título deve ter no mínimo cinco caracteres e no máximo cem.")
-	private String descricao;
+	@NotNull(message = "O atributo tema é obrigatório!")
+	@Size(min = 3, max = 100, message = "O atributo tema deve ter no mínimo 5 caracteres e no máximo 100")
+	private String nomeTema;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("tema")
@@ -38,12 +38,12 @@ public class Tema {
 		this.id = id;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getNomeTema() {
+		return nomeTema;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setNomeTema(String nomeTema) {
+		this.nomeTema = nomeTema;
 	}
 
 	public List<Postagem> getPostagem() {
