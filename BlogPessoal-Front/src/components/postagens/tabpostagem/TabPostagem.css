@@ -1,3 +1,16 @@
 .titulo{
     font-weight: bold;
  }
+
+ .coloracaoTab {
+    background-color:#9D0806;
+}
+
+.tabLabelColoracao{
+    font-weight: bold;
+    color: #DFDFDF !important
+}
+
+.typographyTab{
+    color: #DFDFDF !important;
+}

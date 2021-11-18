@@ -12,66 +12,71 @@ import CadastroPostagem from './components/postagens/cadastropostagem/CadastroPo
 import CadastroTema from './components/temas/cadastrotema/CadastroTema';
 import DeletarPostagem from './components/postagens/deletarpostagem/DeletarPostagem';
 import DeletarTema from './components/temas/deletartema/DeletarTema';
+import store from './store/store';
+import { Provider } from 'react-redux';
+import { ToastContainer, ToastContent } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
+    <Provider store={store}>
+      <ToastContainer/>
     <Router>
-      <Navbar />
+      <Navbar/>
       <Switch>
         <div style={{ minHeight: "100vh" }}>
-
           <Route exact path="/">
-            <Login />
+            <Login/>
           </Route>
 
           <Route path="/login">
-            <Login />
+            <Login/>
           </Route>
 
           <Route path="/cadastrousuario">
-            <CadastroUsuario />
+            <CadastroUsuario/>
           </Route>
 
           <Route path="/home">
-            <Home />
+            <Home/>
           </Route>
 
           <Route path="/temas">
-            <ListaTema />
+            <ListaTema/>
           </Route>
 
           <Route path="/posts">
-            <ListaPostagem />
+            <ListaPostagem/>
           </Route>
 
           <Route exact path='/formulariopostagem'>
-            <CadastroPostagem />
+            <CadastroPostagem/>
           </Route>
 
           <Route exact path='/formulariopostagem/:id'>
-            <CadastroPostagem />
+            <CadastroPostagem/>
           </Route>
 
           <Route exact path='/formulariotema'>
-            <CadastroTema />
+            <CadastroTema/>
           </Route>
 
           <Route exact path='/formulariotema/:id'>
-            <CadastroTema />
+            <CadastroTema/>
           </Route>
 
           <Route path='/deletarpostagem/:id'>
-            <DeletarPostagem />
+            <DeletarPostagem/>
           </Route>
 
           <Route path='/deletartema/:id'>
-            <DeletarTema />
+            <DeletarTema/>
           </Route>
-
         </div>
       </Switch>
-      <Footer />
+      <Footer/>
     </Router>
+    </Provider>
   );
 }
 

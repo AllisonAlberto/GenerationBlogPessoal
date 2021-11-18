@@ -16,5 +16,6 @@
 }
 
 .buttonColor {
+    border: solid #DFDFDF 1px !important;
     color: #DFDFDF !important;
 }

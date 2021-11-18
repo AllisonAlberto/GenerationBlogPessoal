@@ -5,4 +5,5 @@
 .btnModal{
     background-color: #6b0504 !important;
     color: #DFDFDF !important;
+    border: solid #DFDFDF 1px !important;
 }
