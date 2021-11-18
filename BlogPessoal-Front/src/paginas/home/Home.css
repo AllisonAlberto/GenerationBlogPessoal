@@ -1,11 +1,20 @@
-.titulo {
-    color: rgb(118, 188, 221);
-    text-align: center;
+.coloracaoHome {
+    background-color: #6b0504;
 }
 
-.img {
-    width: 760px;
-    height: 404px;
-    display: block;
-    margin: 0 auto;
+.typographyHome{
+    color: #DFDFDF !important;
+}
+
+.imagem {
+    height: 100%;
+    width: 100%;
+}
+
+.texteDecoration{
+    text-decoration: none !important;
+}
+
+.buttonColor {
+    color: #DFDFDF !important;
 }
